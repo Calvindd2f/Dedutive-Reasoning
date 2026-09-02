@@ -1,0 +1,48 @@
+{
+  "policies": [
+    {
+      "policy_id": "baseline_a",
+      "description": "GRADE framing, KT hypothesis and check selection, FORDEC decision, single-loop review.",
+      "stage_assignments": {
+        "framing": "grade",
+        "hypothesis": "kt",
+        "check_selection": "kt",
+        "decision": "fordec",
+        "review": "single_loop"
+      }
+    },
+    {
+      "policy_id": "baseline_b",
+      "description": "SAFE framing, RPD hypothesis, SHOR check selection, FORDEC decision, NITS review.",
+      "stage_assignments": {
+        "framing": "safe",
+        "hypothesis": "rpd",
+        "check_selection": "shor",
+        "decision": "fordec",
+        "review": "nits"
+      }
+    },
+    {
+      "policy_id": "baseline_c",
+      "description": "3P framing, KT hypothesis, SHOR check selection, CARE decision, double-loop review.",
+      "stage_assignments": {
+        "framing": "3p",
+        "hypothesis": "kt",
+        "check_selection": "shor",
+        "decision": "care",
+        "review": "double_loop"
+      }
+    },
+    {
+      "policy_id": "generic_baseline",
+      "description": "No named framework; generic competent troubleshooting at every stage.",
+      "stage_assignments": {
+        "framing": "generic",
+        "hypothesis": "generic",
+        "check_selection": "generic",
+        "decision": "generic",
+        "review": "generic"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+reasoning:
+  strategy: kepner_tregoe
+governance:
+  strategy: vroom_yetton
+decision:
+  strategy: fordec
+communication:
+  strategy: nits
+learning:
+  strategy: single_loop

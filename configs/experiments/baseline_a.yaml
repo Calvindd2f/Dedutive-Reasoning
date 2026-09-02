@@ -1,0 +1,11 @@
+# Ports data/strategies/stage_policies.json's "baseline_a" (GRADE framing, KT hypothesis/check_selection, FORDEC decision, single-loop review)
+reasoning:
+  strategy: kepner_tregoe
+governance:
+  strategy: vroom_yetton
+decision:
+  strategy: fordec
+communication:
+  strategy: nits
+learning:
+  strategy: single_loop

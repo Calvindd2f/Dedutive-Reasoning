@@ -1,0 +1,64 @@
+{
+  "tools": [
+    {
+      "name": "envsense",
+      "description": "Returns join state, tenant or domain identity, VPN state, OS facts, and other visible environment details.",
+      "required_args": ["target"],
+      "returns": ["facts"]
+    },
+    {
+      "name": "run_command",
+      "description": "Runs a shell or PowerShell command on the target endpoint in the simulated incident.",
+      "required_args": ["command"],
+      "returns": ["stdout", "stderr", "exit_code"]
+    },
+    {
+      "name": "read_eventlog",
+      "description": "Queries Windows or service event logs by channel and filter in the simulated incident.",
+      "required_args": ["channel"],
+      "returns": ["events"]
+    },
+    {
+      "name": "check_time_sync",
+      "description": "Checks time skew against a domain controller or configured time source.",
+      "required_args": ["target"],
+      "returns": ["offset_seconds", "source"]
+    },
+    {
+      "name": "resolve_dns",
+      "description": "Resolves hostnames or SRV records and returns answers plus observed latency.",
+      "required_args": ["name"],
+      "returns": ["answers", "latency_ms"]
+    },
+    {
+      "name": "query_ad_computer",
+      "description": "Retrieves Active Directory computer-object metadata for the simulated endpoint.",
+      "required_args": ["computer_name"],
+      "returns": ["enabled", "last_logon", "pwd_last_set", "duplicate_candidates"]
+    },
+    {
+      "name": "query_m365",
+      "description": "Retrieves Microsoft 365 identity, mailbox, Teams, connector, or Intune state in the simulated tenant.",
+      "required_args": ["query"],
+      "returns": ["records"]
+    },
+    {
+      "name": "inspect_network_path",
+      "description": "Checks routing, VPN, MTU, latency, and path characteristics between named endpoints.",
+      "required_args": ["path"],
+      "returns": ["latency_ms", "mtu", "route", "findings"]
+    },
+    {
+      "name": "inspect_policy",
+      "description": "Compares endpoint, Intune, or Group Policy state against expected assignments.",
+      "required_args": ["scope"],
+      "returns": ["applied_policies", "conflicts", "recent_changes"]
+    },
+    {
+      "name": "inspect_backup",
+      "description": "Inspects backup job, catalog, indexing, and restore metadata state.",
+      "required_args": ["job"],
+      "returns": ["job_status", "catalog_status", "restore_status"]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Ports "baseline_c" (3P framing, KT hypothesis, SHOR check_selection, CARE decision, double-loop review)
+reasoning:
+  strategy: hybrid_kt_rpd
+governance:
+  strategy: vroom_yetton
+decision:
+  strategy: fordec
+communication:
+  strategy: nits
+learning:
+  strategy: double_loop

@@ -1,0 +1,11 @@
+# Ports "baseline_b" (SAFE framing, RPD hypothesis, SHOR check_selection, FORDEC decision, NITS review)
+reasoning:
+  strategy: recognition_primed
+governance:
+  strategy: vroom_yetton
+decision:
+  strategy: fordec
+communication:
+  strategy: nits
+learning:
+  strategy: single_loop

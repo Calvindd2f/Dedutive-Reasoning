@@ -1,0 +1,118 @@
+{
+  "frameworks": {
+    "kt": {
+      "name": "Kepner-Tregoe",
+      "adapter": "Use structured diagnostic elimination. State what the problem is and is not. Separate facts from assumptions. Generate two to four plausible causes. Choose tests that discriminate between causes. Prefer the least disruptive valid remediation."
+    },
+    "fordec": {
+      "name": "FORDEC",
+      "adapter": "Use Facts, Options, Risks and benefits, Decision, Execution, Check. Do not jump directly from facts to action. Explicitly compare at least two options before choosing one."
+    },
+    "rpd": {
+      "name": "Recognition-Primed Decision",
+      "adapter": "Use expert pattern recognition first. Identify the closest known incident pattern. List the smallest number of confirming checks. Act quickly if the pattern fits and risk is acceptable. Switch to analytical mode if the pattern does not fit."
+    }
+  },
+  "governance_modes": {
+    "autonomous": "Act within available permissions when the blast radius is narrow and the remediation is reversible.",
+    "consultative": "Consult the responsible owner or domain specialist before a change that affects shared services or policy.",
+    "group_decision": "Escalate to a cross-functional decision when the blast radius, operational risk, or customer impact is broad."
+  },
+  "stage_arms": {
+    "safe": {
+      "name": "SAFE",
+      "adapter": "Frame the situation by separating symptom, affected scope, failure impact, and immediate evidence. Keep the frame concise and identify the safest next information need."
+    },
+    "grade": {
+      "name": "GRADE",
+      "adapter": "Frame the incident by grading goal, risk, assumptions, data quality, and escalation need. Highlight what must be known before confident action."
+    },
+    "3p": {
+      "name": "3P",
+      "adapter": "Frame the incident through people, process, and platform. Use this to avoid treating a recurring operational issue as only a one-device technical fault."
+    },
+    "generic": {
+      "name": "Generic baseline",
+      "adapter": "Use competent generic troubleshooting without applying a named framework. Keep outputs structured and evidence-bound."
+    },
+    "kt": {
+      "name": "Kepner-Tregoe",
+      "adapter": "Use structured diagnostic elimination. State what the problem is and is not. Separate facts from assumptions. Generate plausible causes and choose discriminating tests."
+    },
+    "rpd": {
+      "name": "Recognition-Primed Decision",
+      "adapter": "Use expert pattern recognition first. Identify the closest known incident pattern, run minimal confirmers, and switch to analytical mode if the pattern does not fit."
+    },
+    "shor": {
+      "name": "SHOR",
+      "adapter": "Use a hypothesis-centric loop: state the situation, form hypotheses, observe discriminating evidence, and revise or recommend based on observed signals."
+    },
+    "fordec": {
+      "name": "FORDEC",
+      "adapter": "Use Facts, Options, Risks and benefits, Decision, Execution, Check. Compare at least two options before choosing a proportionate action."
+    },
+    "care": {
+      "name": "CARE",
+      "adapter": "Choose action by considering containment, action, risk, and escalation. Favor reversible containment before broader remediation when uncertainty remains."
+    },
+    "5d": {
+      "name": "5D",
+      "adapter": "Use define, diagnose, decide, do, and demonstrate. Make the chosen remediation measurable through explicit verification."
+    },
+    "nits": {
+      "name": "NITS",
+      "adapter": "Produce a handoff brief with Nature, Intention, Time, and Special instructions. Use it for communication, not diagnosis."
+    },
+    "single_loop": {
+      "name": "Single-loop learning",
+      "adapter": "Capture the immediate corrective lesson that prevents the same local miss without changing the operating model."
+    },
+    "double_loop": {
+      "name": "Double-loop learning",
+      "adapter": "Question the assumptions, process, or operating model that allowed the incident class to recur or remain hidden."
+    }
+  },
+  "response_contract": {
+    "problem_frame": "string",
+    "known_facts": ["string"],
+    "key_unknowns": ["string"],
+    "hypotheses": [
+      {
+        "name": "string",
+        "confidence": 0.0,
+        "why_it_fits": ["string"]
+      }
+    ],
+    "next_best_tests": [
+      {
+        "test": "string",
+        "purpose": "string",
+        "expected_signal": "string"
+      }
+    ],
+    "decision": {
+      "chosen_path": "string",
+      "why": "string",
+      "risks": ["string"]
+    },
+    "execution_plan": ["string"],
+    "verification_steps": ["string"],
+    "nits_brief": {
+      "nature": "string",
+      "intention": "string",
+      "time": "string",
+      "special_instructions": "string"
+    },
+    "post_incident_learning": {
+      "loop_type": "single_loop or double_loop",
+      "lesson": "string"
+    },
+    "stage_outputs": {
+      "framing": {"summary": "string"},
+      "hypothesis": {"summary": "string"},
+      "check_selection": {"summary": "string"},
+      "decision": {"summary": "string"},
+      "review": {"summary": "string"}
+    }
+  }
+}
